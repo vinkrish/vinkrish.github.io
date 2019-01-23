@@ -20,6 +20,28 @@ class ResumeIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
+        <p>
+          I'm a Developer from Bangalore having experience in Full Stack and Mobile App Development.
+          I like to go on a trekking, skating and would love to play Piano one day.
+        </p>
+        <p>
+          Having a blog to document what I learn was a long-overdue and I'm happy to share a bit about my experience with the world.
+        </p>
+        <h3>Learning</h3>
+        <VerticalTimeline layout="1-column">
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Jan 2019"
+            iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+          >
+            <h3 className="vertical-timeline-element-title">Python and Machine Learning</h3>
+            <h4 className="vertical-timeline-element-subtitle">from Coursera and Udacity</h4>
+            <p>
+              Linear Algebra, Descriptive Statistics, Inferential Statistics...
+            </p>
+          </VerticalTimelineElement>
+        </VerticalTimeline>
         <h3>Work Experience</h3>
         <VerticalTimeline layout="1-column">
           <VerticalTimelineElement
@@ -109,10 +131,6 @@ class ResumeIndex extends React.Component {
               84%
             </p>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
-            iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-            icon={<FontAwesomeIcon icon={faCode} />}
-          />
         </VerticalTimeline>
       </Layout>
     )
