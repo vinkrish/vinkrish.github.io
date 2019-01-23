@@ -1,68 +1,127 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-
+import { graphql } from 'gatsby'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
 
-class BlogIndex extends React.Component {
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
+import 'react-vertical-timeline-component/style.min.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode } from '@fortawesome/free-solid-svg-icons'
+
+class ResumeIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
-
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout title={siteTitle}>
         <SEO
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
-        })}
+        <VerticalTimeline layout="1-column">
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="July, 2018 - Dec, 2018"
+            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+        >
+            <h3 className="vertical-timeline-element-title">Tech Lead</h3>
+            <h4 className="vertical-timeline-element-subtitle">Think And Learn Pvt Ltd</h4>
+            <p>
+            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="2010 - 2011"
+            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+        >
+            <h3 className="vertical-timeline-element-title">Art Director</h3>
+            <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+            <p>
+            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="2008 - 2010"
+            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+        >
+            <h3 className="vertical-timeline-element-title">Web Designer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+            <p>
+            User Experience, Visual Design
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="2006 - 2008"
+            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+        >
+            <h3 className="vertical-timeline-element-title">Web Designer</h3>
+            <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+            <p>
+            User Experience, Visual Design
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="April 2013"
+            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+        >
+            <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
+            <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
+            <p>
+            Strategy, Social Media
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="November 2012"
+            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+        >
+            <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
+            <h4 className="vertical-timeline-element-subtitle">Certification</h4>
+            <p>
+            Creative Direction, User Experience, Visual Design
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="2002 - 2006"
+            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+        >
+            <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
+            <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
+            <p>
+            Creative Direction, Visual Design
+            </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+            iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+        />
+        </VerticalTimeline>
       </Layout>
     )
   }
 }
 
-export default BlogIndex
+export default ResumeIndex
 
 export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-        }
       }
     }
   }

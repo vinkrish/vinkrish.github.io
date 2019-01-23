@@ -13,8 +13,7 @@ function Bio() {
         return (
           <div
             style={{
-              display: `flex`,
-              marginBottom: rhythm(2.5),
+              display: `flex`
             }}
           >
             <Image
@@ -30,12 +29,19 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
+            <p> 
+              Hi, I'm <strong>{author}</strong> - Polyglot Coder. You can find me on
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+              <a href="https://github.com/vinkrish" target="_blank">
+                GitHub
+              </a>
+              {` `}
+              <a href="https://www.linkedin.com/in/vinay-krishna-07a1281a/" target="_blank">
+                LinkedIn
+              </a>
+              {` `}
+              <a href={`https://twitter.com/${social.twitter}`} target="_blank">
+                Twitter
               </a>
             </p>
           </div>
@@ -47,7 +53,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/vinkrish.jpeg/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
