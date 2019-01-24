@@ -43,6 +43,10 @@ function Bio() {
               <a href={`https://twitter.com/${social.twitter}`} target="_blank">
                 Twitter
               </a>
+              {` `}
+              <a href="https://www.youtube.com/user/vinaykrishna1989/playlists?view_as=subscriber" target="_blank">
+                YouTube
+              </a>
             </p>
           </div>
         )
