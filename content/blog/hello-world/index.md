@@ -1,6 +1,6 @@
 ---
 title: Hello World
-date: '2019-01-24'
+date: '2019-01-23'
 ---
 
 When starting to learn new programming language - historically, it has became rudimentary to start with **"Hello World"** example, so I decided to keep this markdown file which was originally included in gatsby starter blog, but changed content to have my say.
@@ -17,4 +17,4 @@ Swift
 JavaScript
 ```
 <br/>
-I'll be sharing few things from my past experience and will suffix language in title for identifying content easily if I went on blogging more in future.
+I'll be sharing few things from my past experience and document everything I learn. I will also suffix programming language in title to identify content easily.
