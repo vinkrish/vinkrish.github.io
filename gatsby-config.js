@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `TunedReality`,
     author: `Vinay`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `A personal blog.`,
+    siteUrl: `https://vinkrish.github.io/`,
     social: {
       github: `vinkrish`,
       twitter: `vinkrishh`
@@ -68,13 +68,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Vinay's Blog`,
+        short_name: `VinKrish`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/vinkrish.jpeg`,
       },
     },
     `gatsby-plugin-offline`,
