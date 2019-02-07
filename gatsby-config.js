@@ -41,6 +41,19 @@ module.exports = {
             },
           },
           {
+            resolve: "gatsby-remark-embed-gist",
+            options: {
+              // Optional:
+    
+              // the github handler whose gists are to be accessed
+              username: 'vinkrish',
+    
+              // a flag indicating whether the github default gist css should be included or not
+              // default: true
+              includeDefaultCss: true
+            }
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: "language-",
@@ -84,26 +97,6 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    },
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-embed-gist",
-            options: {
-              // Optional:
-    
-              // the github handler whose gists are to be accessed
-              username: 'weirdpattern',
-    
-              // a flag indicating whether the github default gist css should be included or not
-              // default: true
-              includeDefaultCss: true
-            }
-          }
-        ]
-      }
     },
   ],
 }
