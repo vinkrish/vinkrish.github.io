@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[TunedReality]]></title><description><![CDATA[A personal blog.]]></description><link>https://vinkrish.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Fri, 15 Feb 2019 10:28:01 GMT</lastBuildDate><item><title><![CDATA[Automate - Remember DRY!]]></title><description><![CDATA[Every time I create new blog these are the steps involved. gatsby build Remove content of Github Pages repo and push the commit, this…]]></description><link>https://vinkrish.github.io//markdown/automate/</link><guid isPermaLink="false">https://vinkrish.github.io//markdown/automate/</guid><pubDate>Sun, 27 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Every time I create new blog these are the steps involved.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;gatsby build&lt;/li&gt;
+&lt;li&gt;Remove content of Github Pages repo and push the commit, this ensures unused files are removed.&lt;/li&gt;
+&lt;li&gt;Copy content of public folder from source repo to GitHub Pages repo, push the commit.&lt;/li&gt;
+&lt;li&gt;Finally source repo needs to be commited and pushed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As I was doing it manually, this is against DRY (Don’t Repeat Yourself) principle.&lt;/p&gt;
+&lt;p&gt;This is how I come up with automating this task with these bash scripts:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;One repo requires cleaning old content or else unused files will live on.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token shebang important&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+REPO_DIR&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;/Users/vinkrish/Documents/workspace/javascript/vinkrish.github.io
+&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$REPO_DIR&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; -r *
+
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; add &lt;span class=&quot;token keyword&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -m &lt;span class=&quot;token string&quot;&gt;&quot;deleting cache and previous files&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Updating two repos with newly added blog post&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token shebang important&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;read&lt;/span&gt; blog_name
+REPO_DIR&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;/Users/vinkrish/Documents/workspace/javascript/vinkrish.github.io
+SRC_DIR&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;/Users/vinkrish/Documents/workspace/javascript/my-blog-starter/public
+
+&lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; -R &lt;span class=&quot;token variable&quot;&gt;$SRC_DIR&lt;/span&gt;/* &lt;span class=&quot;token variable&quot;&gt;$REPO_DIR&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$REPO_DIR&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; add &lt;span class=&quot;token keyword&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -m &lt;span class=&quot;token string&quot;&gt;&quot;added &lt;span class=&quot;token variable&quot;&gt;$blog_name&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin master
+
+&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$SRC_DIR&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; add &lt;span class=&quot;token keyword&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -m &lt;span class=&quot;token string&quot;&gt;&quot;added &lt;span class=&quot;token variable&quot;&gt;$blog_name&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[You have to BASH!]]></title><description><![CDATA[You may not be a system admin, but its not an excuse for not knowing some bash.]]></description><link>https://vinkrish.github.io//markdown/bash/</link><guid isPermaLink="false">https://vinkrish.github.io//markdown/bash/</guid><pubDate>Sat, 26 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;You may not be a system admin, but its not an excuse for not knowing some bash.&lt;/p&gt;
+&lt;p&gt;&lt;div id=&quot;gist92575633&quot; class=&quot;gist&quot;&gt;
+    &lt;div class=&quot;gist-file&quot;&gt;
+      &lt;div class=&quot;gist-data&quot;&gt;
+        &lt;div class=&quot;js-gist-file-update-container js-task-list-container file-box&quot;&gt;
+  &lt;div id=&quot;file-bash_command-md&quot; class=&quot;file&quot;&gt;
+    
+  &lt;div id=&quot;file-bash_command-md-readme&quot; class=&quot;readme blob instapaper_body js-code-block-container&quot;&gt;
+    &lt;article class=&quot;markdown-body entry-content&quot; itemprop=&quot;text&quot;&gt;&lt;h2&gt;&lt;a id=&quot;user-content-here-you-go&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#here-you-go&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Here you go&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;clear&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;sudo apt=get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;whoami
+hostname
+ls
+ls -l
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;To list hidden folder and files&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;ls -la&lt;/code&gt;&lt;br&gt;
+Folders&lt;br&gt;
+&lt;code&gt;ls -l -G&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;ls -l --no-group&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;man ls&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Print Working Directory&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;pwd&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd /bin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Home directory&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;cd ~&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Entries that starts with p&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;ls -l /bin/p*&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;At root&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;ls -l /&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ls -l /var&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To print out content of file&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;cat /var/file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To print line numbers&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;cat -n /var/file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;tail /var/file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To open just content without previous commands&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;less /var/file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;g -&amp;gt; go to beginning of file  
+Shift + g -&amp;gt; go to end of file  
+/word + enter -&amp;gt; searches the word in file  
+:q -&amp;gt; quit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Open folder or file in default app&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;&lt;pre&gt;open &lt;span class=&quot;pl-c1&quot;&gt;.&lt;/span&gt;
+open folder/file.txt
+open folder/file.asd -a TextEdit&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;To create a file&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;touch file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Write to a file (overwrites)&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;echo &apos;hello world!&apos; &amp;gt; file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To append file&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;echo &apos; appended&apos; &amp;gt;&amp;gt; file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To create folder + intermediary folders with -p flag&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;&lt;pre&gt;mkdir folder_name
+mkdir -p outer_folder/middle_folder/inner_folder
+ls outer_folder/middle_folder
+outputs inner_folder&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Delete file and folder&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;&lt;pre&gt;rm file.txt
+rm -r folder_name&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Move Files&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;&lt;pre&gt;mv &lt;span class=&quot;pl-c1&quot;&gt;source&lt;/span&gt; destination
+mv file.txt folder_name/file.txt&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Rename file&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;mv file.txt renamed_file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rename folder&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;mv folder_name/ renamed_folder_name&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Move all content from one folder to another&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;mv source_folder/* destination_folder/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Copy file&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;cp file.txt destination_folder/file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Copy all files&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;cp -R source_folder/* destination_folder/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Find png images in a folder&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;find image_folder/ -name &quot;*.png&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Case insensitive search&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;find image_folder/ -iname &quot;*.jpg&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;All folders (outer + inner)&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;find . -type d&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Find folders having images in their name&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;find . -type d -name &quot;images&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Deleting with find&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;find dist/ -name &quot;*.built.js&quot; -delete&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Add execute permission to user&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;chmod u+x script.sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Write persmission to all users&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;chmod a+w /var/file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Change owner&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;sudo chown vinay /var/file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Change permission so that you don&apos;t have to use sudo&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;chmod u+w /var/file.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;find /var/log/syslog* -print0 | xargs&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;find /var/log/syslog* -type f&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To use pipes properly&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;find /var/log/syslog* -type f -print0 | xargs 0 chmod a+r&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;&lt;pre&gt;ifconfig
+ifconfig &lt;span class=&quot;pl-k&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;inet addr&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+ifconfig &lt;span class=&quot;pl-k&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;inet addr&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;pl-k&quot;&gt;|&lt;/span&gt; head -n 1&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Text editor&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;nano file-name.sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To generate public and private key with comment to identify&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;ssh-keygen -b 2048 -t rsa -C vinay@localhost.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ls .ssh&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;cat .ssh/id_rsa.pub&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Save the public key on server&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;ssh-copy-id -i .ssh/id_rsa.pub vinay@machine-name&lt;/code&gt;&lt;/p&gt;
+&lt;/article&gt;
+  &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+      &lt;div class=&quot;gist-meta&quot;&gt;
+        &lt;a href=&quot;https://gist.github.com/vinkrish/e45f000c3c10fbd731b2dc91d0dcdcd2/raw/bd8ae2af45b5a29b2d69d2c3c774d861cb46a367/bash_command.md&quot; style=&quot;float:right&quot;&gt;view raw&lt;/a&gt;
+        &lt;a href=&quot;https://gist.github.com/vinkrish/e45f000c3c10fbd731b2dc91d0dcdcd2#file-bash_command-md&quot;&gt;bash_command.md&lt;/a&gt;
+        hosted with &amp;#10084; by &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;</content:encoded></item><item><title><![CDATA[First Thing First - Learn Markdown]]></title><description><![CDATA[I have so many github repos and none of them have proper README.md in it because I was lazy and thought markdown is yet another markup…]]></description><link>https://vinkrish.github.io//markdown/</link><guid isPermaLink="false">https://vinkrish.github.io//markdown/</guid><pubDate>Fri, 25 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have so many github repos and none of them have proper README.md in it because I was lazy and thought markdown is yet another markup language which needs to be learnt.&lt;/p&gt;
+&lt;p&gt;Before bringing this blog up I learnt markdown and documented it public gist. Here I’m sharing the same gist - thanks to people at &lt;strong&gt;&lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-remark-embed-gist/&quot;&gt;gatsby-remark-embed-gist&lt;/a&gt;&lt;/strong&gt; for developing gatsby plugin which allows embedding gist directly into markdown.&lt;/p&gt;
+&lt;h3&gt;Below are the original markdown markup&lt;/h3&gt;
+&lt;p&gt;&lt;div id=&quot;gist94214580&quot; class=&quot;gist&quot;&gt;
+    &lt;div class=&quot;gist-file&quot;&gt;
+      &lt;div class=&quot;gist-data&quot;&gt;
+        &lt;div class=&quot;js-gist-file-update-container js-task-list-container file-box&quot;&gt;
+  &lt;div id=&quot;file-markdown-md&quot; class=&quot;file&quot;&gt;
+    
+  &lt;div id=&quot;file-markdown-md-readme&quot; class=&quot;readme blob instapaper_body js-code-block-container&quot;&gt;
+    &lt;article class=&quot;markdown-body entry-content&quot; itemprop=&quot;text&quot;&gt;&lt;h2&gt;&lt;a id=&quot;user-content-italic&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#italic&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Italic&lt;/h2&gt;
+&lt;p&gt;_Writing in Markdown is not that hard!_    &lt;strong&gt;-&amp;gt;&lt;/strong&gt;    &lt;em&gt;Writing in Markdown is not that hard!&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-emphasize&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#emphasize&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Emphasize&lt;/h2&gt;
+&lt;p&gt;*Writing in Markdown is not that hard!*    &lt;strong&gt;-&amp;gt;&lt;/strong&gt;    &lt;em&gt;Writing in Markdown is not that hard!&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-bold&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#bold&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Bold&lt;/h2&gt;
+&lt;p&gt;**Writing in Markdown is not that hard!**    &lt;strong&gt;-&amp;gt;&lt;/strong&gt;    &lt;strong&gt;Writing in Markdown is not that hard!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-strike-through&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#strike-through&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Strike Through&lt;/h2&gt;
+&lt;p&gt;~~Don&apos;t Follow This~~    &lt;strong&gt;-&amp;gt;&lt;/strong&gt;    &lt;del&gt;Don&apos;t Follow This&lt;/del&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-header&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#header&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Header&lt;/h2&gt;
+&lt;p&gt;# Header one&lt;br&gt;
+## Header two&lt;br&gt;
+### Header three&lt;br&gt;
+#### Header four&lt;br&gt;
+##### Header five&lt;br&gt;
+###### Header six&lt;/p&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-inline-link&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#inline-link&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Inline Link&lt;/h2&gt;
+&lt;p&gt;[Search for it.](&lt;a href=&quot;http://www.google.com&quot; rel=&quot;nofollow&quot;&gt;www.google.com&lt;/a&gt;)    &lt;strong&gt;-&amp;gt;&lt;/strong&gt;    &lt;a href=&quot;www.google.com&quot;&gt;Search for it.&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a id=&quot;user-content-divider&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#divider&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Divider&lt;/h3&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content----&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#---&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;---&lt;/h2&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-blockquote&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#blockquote&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Blockquote&lt;/h2&gt;
+&lt;p&gt;&amp;gt; &quot;Her eyes had called him and his soul had leaped at the call. To live, to err, to fall, to triumph, to recreate life out of life!&quot;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;Her eyes had called him and his soul had leaped at the call. To live, to err, to fall, to triumph, to recreate life out of life!&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-lists&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#lists&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Lists&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;  - List 1
+  - List 2
+    - Sub List 21
+
+
+  * List A
+    * Sub List AA
+      * Sub Sub List AAA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;List 1&lt;/li&gt;
+&lt;li&gt;List 2
+&lt;ul&gt;
+&lt;li&gt;Sub List 21&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;List A
+&lt;ul&gt;
+&lt;li&gt;Sub List AA
+&lt;ul&gt;
+&lt;li&gt;Sub Sub List AAA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-paragraph---soft-break-has-2-spaces-in-end&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#paragraph---soft-break-has-2-spaces-in-end&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Paragraph - soft break has 2 spaces in end&lt;/h2&gt;
+&lt;p&gt;We pictured the meek mild creatures where&lt;br&gt;
+They dwelt in their strawy pen,&lt;br&gt;
+Nor did it occur to one of us there&lt;br&gt;
+To doubt they were kneeling then.&lt;/p&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-paragraph---4-spaces-turns-it-into-code&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#paragraph---4-spaces-turns-it-into-code&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Paragraph - 4 spaces turns it into code&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;.my-link {
+    text-decoration: underline;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-code&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#code&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Code&lt;/h2&gt;
+&lt;p&gt;can use programming language the code block is written in&lt;br&gt;
+```sh&lt;br&gt;
+$ NODE_ENV=production node app&lt;br&gt;
+```&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;&lt;pre&gt;$ NODE_ENV=production node app&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-table&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#table&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Table&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;| Plugin | README |
+| ------ | ------ |
+| Dropbox | [alt text][db] |
+| Github | [alt text][gh] |
+| Google Drive | [alt text][gd] |
+| OneDrive | [alt text][od] |
+| Medium | [alt text][m] |
+| Google Analytics | [alt text][ga] |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Plugin&lt;/th&gt;
+&lt;th&gt;README&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Dropbox&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://gist.github.com/vinkrish&quot;&gt;alt text&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Github&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://gist.github.com/vinkrish&quot;&gt;alt text&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Drive&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://gist.github.com/vinkrish&quot;&gt;alt text&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;OneDrive&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://gist.github.com/vinkrish&quot;&gt;alt text&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Medium&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://gist.github.com/vinkrish&quot;&gt;alt text&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Analytics&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://gist.github.com/vinkrish&quot;&gt;alt text&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-inline-code&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#inline-code&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Inline code&lt;/h2&gt;
+&lt;p&gt;`${some code}`    &lt;strong&gt;-&amp;gt;&lt;/strong&gt;    &lt;code&gt;${some code}&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-inline-image---alt-text-is-optional&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#inline-image---alt-text-is-optional&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Inline Image - Alt Text is optional&lt;/h2&gt;
+&lt;p&gt;![Alt Text](&lt;a href=&quot;http://octodex.github.com/images/octdrey-catburn.jpg&quot;&gt;http://octodex.github.com/images/octdrey-catburn.jpg&lt;/a&gt;)    &lt;strong&gt;-&amp;gt;&lt;/strong&gt;    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://camo.githubusercontent.com/d658f58daffe68139945a63e74623eae82ae1505/687474703a2f2f6f63746f6465782e6769746875622e636f6d2f696d616765732f6f6374647265792d6361746275726e2e6a7067&quot;&gt;&lt;img src=&quot;https://camo.githubusercontent.com/d658f58daffe68139945a63e74623eae82ae1505/687474703a2f2f6f63746f6465782e6769746875622e636f6d2f696d616765732f6f6374647265792d6361746275726e2e6a7067&quot; alt=&quot;Alt Text&quot; data-canonical-src=&quot;http://octodex.github.com/images/octdrey-catburn.jpg&quot; style=&quot;max-width:100%;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a id=&quot;user-content-reference-links---ignored-by-md-processor&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#reference-links---ignored-by-md-processor&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Reference Links - ignored by md processor&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;[db]: &amp;lt;https://gist.github.com/vinkrish&amp;gt;
+[gh]: &amp;lt;https://gist.github.com/vinkrish&amp;gt;
+[gd]: &amp;lt;https://gist.github.com/vinkrish&amp;gt;
+[od]: &amp;lt;https://gist.github.com/vinkrish&amp;gt;
+[m]: &amp;lt;https://gist.github.com/vinkrish&amp;gt;
+[ga]: &amp;lt;https://gist.github.com/vinkrish&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/article&gt;
+  &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+      &lt;div class=&quot;gist-meta&quot;&gt;
+        &lt;a href=&quot;https://gist.github.com/vinkrish/3d9acf02f79ae57d0652c5669d4045b3/raw/ea11ad7a85c8a3b3a6176815115c143848b46afc/markdown.md&quot; style=&quot;float:right&quot;&gt;view raw&lt;/a&gt;
+        &lt;a href=&quot;https://gist.github.com/vinkrish/3d9acf02f79ae57d0652c5669d4045b3#file-markdown-md&quot;&gt;markdown.md&lt;/a&gt;
+        hosted with &amp;#10084; by &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/p&gt;
+&lt;p&gt;If you are want to build static website from markdown files I would recommend &lt;a href=&quot;https://www.gatsbyjs.org/&quot;&gt;Gatsby&lt;/a&gt; which uses GraphQL and there are simple ones requiring no knowledge on specific language: &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; &amp;#x26; &lt;a href=&quot;https://blot.im/&quot;&gt;Blot&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Before taking things live you can view how markdown actually looks after it is processed or even live edit &lt;a href=&quot;https://dillinger.io/&quot;&gt;here - Dillinger&lt;/a&gt; and then copy the content to your markdown.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Recap & New Beginning]]></title><description><![CDATA[It’s been 5 yrs since I started my career in software industry. I switched jobs, started my own startup and failed in it, although I…]]></description><link>https://vinkrish.github.io//hi-folks/</link><guid isPermaLink="false">https://vinkrish.github.io//hi-folks/</guid><pubDate>Thu, 24 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;It’s been 5 yrs since I started my career in software industry. I switched jobs, started my own startup and failed in it, although I evaluate myself from time to time it’s time to put that in writing - this also helps me plan.&lt;/p&gt;
+&lt;p&gt;I used to fear shear number of students passing out each year and then finding job while recession was still fresh in my mind. When I passed out as Elecronics and Communication Engineer I wasn’t cut out for any job in that field but programming caught my attention and decided to do Masters in Computer Science, now I feel I could have skipped college if I wanted to be where I’m today - but I wasn’t the same person back then so I don’t regret my decision. One thing I do regret is not making use of my first computer which I got at the age of 20.&lt;/p&gt;
+&lt;h2&gt;Success&lt;/h2&gt;
+&lt;p&gt;I have come across people talking about their success stories - most of them had access to computer and resources at very young age, thinking in that direction I am happy to be where I’m today despite being late to the party.&lt;/p&gt;
+&lt;h2&gt;Introvert&lt;/h2&gt;
+&lt;p&gt;Being an introvert has it’s downside in any industry, I’ve been working on it gradually but it’s a slow process. It does affect my career when I wasn’t voicing my opinion and bringing ideas to table.&lt;/p&gt;
+&lt;h2&gt;Forgetfullness or Amnesia&lt;/h2&gt;
+&lt;p&gt;I am fortunate to be healthy all my life and only complain I had is my forgetfulness. The best I could do is remembering my mobile number - when I learn new programming language it was never difficult to adopt and get things done but the challenge is to remember language specific consruct when I jump to learning new things.
+This also doesn’t help me while having conversation about Data Structure and Algorithms which I honestly can’t remember unless I refer them again.&lt;/p&gt;
+&lt;h2&gt;Vulnerabilities&lt;/h2&gt;
+&lt;p&gt;People are building cool stuff and I’m using those libraries to meet my requirements, there is always a feeling that I’m not being part of bigger open-source community where I can contribute and I’m sure it will feel nice being in that position.&lt;/p&gt;
+&lt;h2&gt;Quest for learning&lt;/h2&gt;
+&lt;p&gt;So far I’ve tried Android App Development, Angular, React, Java back-end, NodeJS, MySQL, MongoDB, GraphQL, AWS. I’ve documented most of my work or demo projects on &lt;a href=&quot;https://github.com/vinkrish&quot;&gt;GitHub&lt;/a&gt;, with this blog I’m willing to go step further document my learning, be pro-active and possibly create some content for YouTube.&lt;/p&gt;
+&lt;p&gt;This year again I’m learning something new - Python / Machine Learning and DevOps with Docker and Kubernetes, I’ve my doubts on how successful I can be in this challenging field but I’m willing to give my best.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[When starting to learn new programming language - historically, it has became rudimentary to start with  “Hello World”  example, so I…]]></description><link>https://vinkrish.github.io//hello-world/</link><guid isPermaLink="false">https://vinkrish.github.io//hello-world/</guid><pubDate>Wed, 23 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;When starting to learn new programming language - historically, it has became rudimentary to start with &lt;strong&gt;“Hello World”&lt;/strong&gt; example, so I decided to keep this markdown file which was originally included in gatsby starter blog, but changed content to have my say.&lt;/p&gt;
+&lt;p&gt;If you are wondering how I build this blog? check &lt;a href=&quot;https://www.gatsbyjs.org/&quot;&gt;Gatsby&lt;/a&gt; for inspiration.&lt;/p&gt;
+&lt;p&gt;Since this is my first blog I thought why not try to remember all programming languages/scripts I’ve tried my hands on:  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;C
+C++
+Java
+Python
+PHP
+C#
+Swift
+JavaScript&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;br/&gt;
+I&apos;ll be sharing few things from my past experience and document everything I learn. I will also suffix programming language in title to identify content easily.</content:encoded></item></channel></rss>
