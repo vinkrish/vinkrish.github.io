@@ -45,3 +45,20 @@ This is how I come up with automating this task with these bash scripts:
     git commit -m "added $blog_name"
     git push origin master
 ```
+You need to update `.bash_profile`:
+```bash
+export PATH=$PATH:/Users/vinay/bin
+```
+
+Your script will be in bin directory:
+```bash
+cd ~
+mkdir bin
+```
+
+Give permission for the script to be executable:
+```bash
+chmod u+x file_name
+```
+
+Now you can call `file_name` from terminal.
