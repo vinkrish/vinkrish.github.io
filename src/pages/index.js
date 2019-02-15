@@ -36,10 +36,10 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="vertical-timeline-element-title">Python and Machine Learning</h3>
+            <h3 className="vertical-timeline-element-title">Machine Learning</h3>
             <h4 className="vertical-timeline-element-subtitle">from Coursera and Udacity</h4>
             <p>
-              Linear Algebra, Descriptive Statistics, Inferential Statistics...
+              Refreshing Linear Algebra, Calculus, Statistics...
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
