@@ -21,6 +21,6 @@ This also doesn't help me while having conversation about Data Structure and Alg
 People are building cool stuff and I'm using those libraries to meet my requirements, there is always a feeling that I'm not being part of bigger open-source community where I can contribute and I'm sure it will feel nice being in that position.
 
 ## Quest for learning
-So far I've tried Android App Development, Angular, React, Java back-end, NodeJS, MySQL, MongoDB, GraphQL, AWS. I've documented most of my work or demo projects on [GitHub](https://github.com/vinkrish), with this blog I'm willing to go step further document my learning, be pro-active and possibly create some content for YouTube.
+So far I've tried Android App Development, Angular, React, Java back-end, NodeJS, MySQL, MongoDB, GraphQL, AWS. I've documented most of my work or demo projects on [GitHub](https://github.com/vinkrish), with this blog I'm willing to go step further document my learning, be pro-active and possibly create some content on YouTube.
 
 This year again I'm learning something new - Python / Machine Learning and DevOps with Docker and Kubernetes, I've my doubts on how successful I can be in this challenging field but I'm willing to give my best.
