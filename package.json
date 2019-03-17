@@ -55,7 +55,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vinkrish/my-personal-blog.git"
+    "url": "git+https://github.com/vinkrish/vinkrish.github.io"
   },
   "scripts": {
     "dev": "gatsby develop",
