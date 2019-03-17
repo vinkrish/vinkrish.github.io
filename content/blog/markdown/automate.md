@@ -62,3 +62,5 @@ chmod u+x file_name
 ```
 
 Now you can call `file_name` from terminal.
+
+**Update:** I realised gh-pages allowes public folder of a app to be github pages, so I created another branch which has gatsby code and master branch now has generated public files, the above steps are unnecessary if you decide to go with this approach.
