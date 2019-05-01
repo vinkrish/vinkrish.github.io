@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[TunedReality]]></title><description><![CDATA[A personal blog.]]></description><link>https://vinkrish.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Sun, 17 Mar 2019 16:28:21 GMT</lastBuildDate><item><title><![CDATA[Extract Text from Subtitle]]></title><description><![CDATA[I wanted to create docs for the course I enrolled which would help me for future reference, the course offers subtitle and I don’t wanted to…]]></description><link>https://vinkrish.github.io//markdown/subtitle-text-extraction/</link><guid isPermaLink="false">https://vinkrish.github.io//markdown/subtitle-text-extraction/</guid><pubDate>Sat, 23 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I wanted to create docs for the course I enrolled which would help me for future reference, the course offers subtitle and I don’t wanted to type and recreate same content for docs so I decided to convert those subtitle files into text files and then copy content into &lt;a href=&quot;https://www.mkdocs.org/&quot;&gt;mkdocs&lt;/a&gt; (which is another repo).&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[TunedReality]]></title><description><![CDATA[A personal blog.]]></description><link>https://vinkrish.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Wed, 01 May 2019 18:10:06 GMT</lastBuildDate><item><title><![CDATA[Extract Text from Subtitle]]></title><description><![CDATA[I wanted to create docs for the course I enrolled which would help me for future reference, the course offers subtitle and I don’t wanted to…]]></description><link>https://vinkrish.github.io//markdown/subtitle-text-extraction/</link><guid isPermaLink="false">https://vinkrish.github.io//markdown/subtitle-text-extraction/</guid><pubDate>Sat, 23 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I wanted to create docs for the course I enrolled which would help me for future reference, the course offers subtitle and I don’t wanted to type and recreate same content for docs so I decided to convert those subtitle files into text files and then copy content into &lt;a href=&quot;https://www.mkdocs.org/&quot;&gt;mkdocs&lt;/a&gt; (which is another repo).&lt;/p&gt;
 &lt;p&gt;Code:&lt;/p&gt;
 &lt;p&gt;&lt;div id=&quot;gist94820341&quot; class=&quot;gist&quot;&gt;
     &lt;div class=&quot;gist-file&quot;&gt;
@@ -7,7 +7,7 @@
   &lt;div id=&quot;file-subtitle-extract-py&quot; class=&quot;file&quot;&gt;
     
 
-  &lt;div itemprop=&quot;text&quot; class=&quot;blob-wrapper data type-python &quot;&gt;
+  &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-python &quot;&gt;
       
 &lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
       &lt;tr&gt;
@@ -294,8 +294,8 @@
         &lt;div class=&quot;js-gist-file-update-container js-task-list-container file-box&quot;&gt;
   &lt;div id=&quot;file-git-commands-md&quot; class=&quot;file&quot;&gt;
     
-  &lt;div id=&quot;file-git-commands-md-readme&quot; class=&quot;readme blob instapaper_body js-code-block-container&quot;&gt;
-    &lt;article class=&quot;markdown-body entry-content&quot; itemprop=&quot;text&quot;&gt;&lt;p&gt;&lt;code&gt;$ git init&lt;/code&gt;&lt;br&gt;
+  &lt;div id=&quot;file-git-commands-md-readme&quot; class=&quot;Box-body readme blob instapaper_body js-code-block-container&quot;&gt;
+    &lt;article class=&quot;markdown-body entry-content p-5&quot; itemprop=&quot;text&quot;&gt;&lt;p&gt;&lt;code&gt;$ git init&lt;/code&gt;&lt;br&gt;
 will initialize git repository in current directory&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;$ git status&lt;/code&gt;&lt;br&gt;
 to see current state of project&lt;/p&gt;
@@ -564,8 +564,8 @@ SRC_DIR&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;/Users/vinkris
         &lt;div class=&quot;js-gist-file-update-container js-task-list-container file-box&quot;&gt;
   &lt;div id=&quot;file-bash_command-md&quot; class=&quot;file&quot;&gt;
     
-  &lt;div id=&quot;file-bash_command-md-readme&quot; class=&quot;readme blob instapaper_body js-code-block-container&quot;&gt;
-    &lt;article class=&quot;markdown-body entry-content&quot; itemprop=&quot;text&quot;&gt;&lt;h2&gt;&lt;a id=&quot;user-content-here-you-go&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#here-you-go&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Here you go&lt;/h2&gt;
+  &lt;div id=&quot;file-bash_command-md-readme&quot; class=&quot;Box-body readme blob instapaper_body js-code-block-container&quot;&gt;
+    &lt;article class=&quot;markdown-body entry-content p-5&quot; itemprop=&quot;text&quot;&gt;&lt;h2&gt;&lt;a id=&quot;user-content-here-you-go&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#here-you-go&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Here you go&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;clear&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;sudo apt=get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;whoami
@@ -688,8 +688,8 @@ ifconfig &lt;span class=&quot;pl-k&quot;&gt;|&lt;/span&gt; grep &lt;span class=&
         &lt;div class=&quot;js-gist-file-update-container js-task-list-container file-box&quot;&gt;
   &lt;div id=&quot;file-markdown-md&quot; class=&quot;file&quot;&gt;
     
-  &lt;div id=&quot;file-markdown-md-readme&quot; class=&quot;readme blob instapaper_body js-code-block-container&quot;&gt;
-    &lt;article class=&quot;markdown-body entry-content&quot; itemprop=&quot;text&quot;&gt;&lt;h2&gt;&lt;a id=&quot;user-content-italic&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#italic&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Italic&lt;/h2&gt;
+  &lt;div id=&quot;file-markdown-md-readme&quot; class=&quot;Box-body readme blob instapaper_body js-code-block-container&quot;&gt;
+    &lt;article class=&quot;markdown-body entry-content p-5&quot; itemprop=&quot;text&quot;&gt;&lt;h2&gt;&lt;a id=&quot;user-content-italic&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#italic&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Italic&lt;/h2&gt;
 &lt;p&gt;_Writing in Markdown is not that hard!_    &lt;strong&gt;-&amp;gt;&lt;/strong&gt;    &lt;em&gt;Writing in Markdown is not that hard!&lt;/em&gt;&lt;/p&gt;
 &lt;h2&gt;&lt;a id=&quot;user-content-emphasize&quot; class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#emphasize&quot;&gt;&lt;svg class=&quot;octicon octicon-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Emphasize&lt;/h2&gt;
 &lt;p&gt;*Writing in Markdown is not that hard!*    &lt;strong&gt;-&amp;gt;&lt;/strong&gt;    &lt;em&gt;Writing in Markdown is not that hard!&lt;/em&gt;&lt;/p&gt;
@@ -846,12 +846,12 @@ This also doesn’t help me while having conversation about Data Structure and A
 &lt;p&gt;If you are wondering how I build this blog? check &lt;a href=&quot;https://www.gatsbyjs.org/&quot;&gt;Gatsby&lt;/a&gt; for inspiration.&lt;/p&gt;
 &lt;p&gt;Since this is my first blog I thought why not try to remember all programming languages/scripts I’ve tried my hands on:  &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;C
-C++
 Java
+Scala
 Python
 PHP
 C#
 Swift
 JavaScript&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;br/&gt;
-I&apos;ll be sharing few things from my past experience and document everything I learn. I will also suffix programming language in title to identify content easily.</content:encoded></item></channel></rss>
+I&apos;ll be sharing few things from my past experience and document everything I learn.</content:encoded></item></channel></rss>
