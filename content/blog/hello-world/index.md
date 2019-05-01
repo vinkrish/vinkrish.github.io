@@ -10,8 +10,8 @@ If you are wondering how I build this blog? check [Gatsby](https://www.gatsbyjs.
 Since this is my first blog I thought why not try to remember all programming languages/scripts I've tried my hands on:  
 ```sh
 C
-C++
 Java
+Scala
 Python
 PHP
 C#
@@ -19,4 +19,4 @@ Swift
 JavaScript
 ```
 <br/>
-I'll be sharing few things from my past experience and document everything I learn. I will also suffix programming language in title to identify content easily.
+I'll be sharing few things from my past experience and document everything I learn.

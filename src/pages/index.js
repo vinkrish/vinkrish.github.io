@@ -21,7 +21,7 @@ class ResumeIndex extends React.Component {
         />
         <Bio />
         <p>
-          I'm a Developer from Bangalore having experience in Full Stack and Mobile App Development.
+          I'm a Developer from Bangalore having experience in Full Stack, Mobile App Development and now working on Machine Learning & Big Data anaylysis using Spark.
           I like to go on a trekking, skating, would love to learn playing Piano and read about Cosmos.
         </p>
         <blockquote>"Somewhere, something incredible is waiting to be known" - Carl Sagan</blockquote>
@@ -39,7 +39,7 @@ class ResumeIndex extends React.Component {
             <h3 className="vertical-timeline-element-title">Machine Learning</h3>
             <h4 className="vertical-timeline-element-subtitle">from Coursera and Udacity</h4>
             <p>
-              Refreshing Linear Algebra, Calculus, Statistics...
+              Statistics, Scikit-Learn, Numpy, Pandas, Matplotlib
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
