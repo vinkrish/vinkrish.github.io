@@ -3,7 +3,7 @@ title: Automate - Remember DRY!
 date: '2019-01-27'
 ---
 
-Every time I create new blog these are the steps involved.
+Every time I create new blog these are the steps involved. (until I realised easy way - see below for update)
 - gatsby build
 - Remove content of Github Pages repo and push the commit, this ensures unused files are removed.
 - Copy content of public folder from source repo to GitHub Pages repo, push the commit.
@@ -63,4 +63,4 @@ chmod u+x file_name
 
 Now you can call `file_name` from terminal.
 
-**Update:** I realised gh-pages allowes public folder of a app to be github pages, so I created another branch which has gatsby code and master branch now has generated public files, the above steps are unnecessary if you decide to go with this approach.
+**Update:** I realised gh-pages allowes public or docs folder of a app to be github pages, so I created another branch which has gatsby code and master branch now has generated public files, the above steps are unnecessary if you decide to go with this approach.

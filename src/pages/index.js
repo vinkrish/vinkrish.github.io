@@ -22,7 +22,7 @@ class ResumeIndex extends React.Component {
         <Bio />
         <p>
           I'm a Developer from Bangalore having experience in full stack, mobile app development and now working on Machine Learning & Big Data analysis using Spark.
-          I like to go on a trekking, skating, would love to learn playing Piano and read about Cosmos.
+          I like to go on a trekking, skating, read about Cosmos and would love to learn playing Piano.
         </p>
         <blockquote>"Somewhere, something incredible is waiting to be known" - Carl Sagan</blockquote>
         <p>
