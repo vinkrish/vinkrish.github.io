@@ -19,4 +19,20 @@ Swift
 JavaScript
 ```
 <br/>
+
+It is also worth mentioning some of the programming paradigms:
+
+1. **Imperative** : Programming with an explicit sequence of commands that update state.
+   - Machine code, Assembly language
+2. **Procedural** : Imperative programming with procedural calls.
+   - Fortran, COBOL, Algol, Basic, C
+3. **Object Oriented** : Programming by defining objects that send messages to each other.
+   - Java, C++, C#, Python
+4. **Declarative** : Programming by specifying the result you want, not how to get it.
+   - SQL, XML (HTML)
+5. **Logic** : Programming by specifying a set of facts and rules.
+   - Prolog, Planner
+6. **Functional** : Programming with function calls that avoid any global state.    
+   - Lisp, Haskell
+
 I'll be sharing few things from my past experience and document everything I learn.
