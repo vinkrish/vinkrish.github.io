@@ -21,8 +21,8 @@ class ResumeIndex extends React.Component {
         />
         <Bio />
         <p>
-          I'm a Developer from Bangalore having experience in full stack, mobile app development and now working on Machine Learning & Big Data analysis using Spark.
-          I like to go on a trekking, skating, read about Cosmos and would love to learn playing Piano.
+          I'm a Developer from Bangalore having experience in full stack, mobile app development and now working on Machine Learning & Data Analysis.
+          I like to go on a trekking, skating, would love to learn playing Piano and reads about Cosmos staring at sky.
         </p>
         <blockquote>"Somewhere, something incredible is waiting to be known" - Carl Sagan</blockquote>
         <p>
@@ -39,7 +39,7 @@ class ResumeIndex extends React.Component {
             <h3 className="vertical-timeline-element-title">Machine Learning</h3>
             <h4 className="vertical-timeline-element-subtitle">from Coursera and Udacity</h4>
             <p>
-              Statistics, Scikit-Learn, Numpy, Pandas, Matplotlib
+              Statistics, Numpy, Pandas, Spark, Scikit-Learn, Matplotlib, Deep Learning, TensorFlow, Keras
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
@@ -59,7 +59,7 @@ class ResumeIndex extends React.Component {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Jan 2017 - Jun 2018"
+            date="Jul 2016 - Jun 2018"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >

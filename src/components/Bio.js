@@ -30,7 +30,7 @@ function Bio() {
               }}
             />
             <p> 
-              Hi, I'm <strong>{author}</strong> - Polyglot Coder. You can find me on
+              Hi, I'm <strong>{author}</strong> - a Programmer who Read-Evaluate-Loop. You can find me on
               {` `}
               <a href="https://github.com/vinkrish" target="_blank">
                 GitHub
@@ -42,10 +42,6 @@ function Bio() {
               {` `}
               <a href={`https://twitter.com/${social.twitter}`} target="_blank">
                 Twitter
-              </a>
-              {` `}
-              <a href="https://www.youtube.com/user/vinaykrishna1989/playlists?view_as=subscriber" target="_blank">
-                YouTube
               </a>
             </p>
           </div>
