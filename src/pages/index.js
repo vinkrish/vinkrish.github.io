@@ -28,16 +28,16 @@ class ResumeIndex extends React.Component {
         <p>
           Having a blog to document what I learn was a long-overdue and I'm happy to share a bit about my experience with the world.
         </p>
-        <h3>Learning</h3>
+        <h3>Working on</h3>
         <VerticalTimeline layout="1-column">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Jan 2019"
+            date="2019-2020"
             iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="vertical-timeline-element-title">Machine Learning</h3>
-            <h4 className="vertical-timeline-element-subtitle">from Coursera and Udacity</h4>
+            <h3 className="vertical-timeline-element-title">Data Engineering & Machine Learning</h3>
+            <h4 className="vertical-timeline-element-subtitle">from Coursera, DataCamp and Udacity</h4>
             <p>
               Statistics, Numpy, Pandas, Spark, Scikit-Learn, Matplotlib, Deep Learning, TensorFlow, Keras
             </p>
@@ -45,6 +45,18 @@ class ResumeIndex extends React.Component {
         </VerticalTimeline>
         <h3>Work Experience</h3>
         <VerticalTimeline layout="1-column">
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Since July 2019"
+            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+          >
+            <h3 className="vertical-timeline-element-title">Senior Software Engineer</h3>
+            <h4 className="vertical-timeline-element-subtitle">AppZui Technologies Pvt Ltd</h4>
+            <p>
+              Working for US based client company (https://www.liquidanalytics.com)
+            </p>
+          </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="July 2018 - Dec 2018"

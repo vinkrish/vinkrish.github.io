@@ -7,7 +7,7 @@ Those who watch Attack On Titan pays keen attention to 'Current publicly availab
 
 ![aot_1](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/aot_1.png)
 
-I love to keep my own copy and another problem with above website is that text is next to thumnail of image which is small.
+I love to keep my own copy (80+ images) and another problem with above website is that text is next to thumnail of image which is small.
 
 ![aot_2](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/aot_2.png)
 
@@ -114,7 +114,7 @@ with open('extracted.txt', 'w') as file:
             file.write(line)
 ```
 
-5. Final step is to use OpenCV to add border and wrtie text on it.
+5. Final step is to use OpenCV to add border and write text on it.
 
 ```python
 import sys
