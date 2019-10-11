@@ -24,7 +24,7 @@ class ResumeIndex extends React.Component {
           I'm a Developer from Bangalore having experience in full stack, mobile app development and now working on Machine Learning & Data Analysis.
           I like to go on a trekking, skating, would love to learn playing Piano and reads about Cosmos staring at sky.
         </p>
-        <blockquote>"Somewhere, something incredible is waiting to be known" - Carl Sagan</blockquote>
+        <blockquote style={{color: '#FFA7C4'}} >"Somewhere, something incredible is waiting to be known" - Carl Sagan</blockquote>
         <p>
           Having a blog to document what I learn was a long-overdue and I'm happy to share a bit about my experience with the world.
         </p>
@@ -36,8 +36,8 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="vertical-timeline-element-title">Data Engineering & Machine Learning</h3>
-            <h4 className="vertical-timeline-element-subtitle">from Coursera, DataCamp and Udacity</h4>
+            <h3 className="timeline-header">Data Engineering & Machine Learning</h3>
+            <h4 className="timeline-header">from Coursera, DataCamp and Udacity</h4>
             <p>
               Statistics, Numpy, Pandas, Spark, Scikit-Learn, Matplotlib, Deep Learning, TensorFlow, Keras
             </p>
@@ -51,10 +51,10 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="vertical-timeline-element-title">Senior Software Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">AppZui Technologies Pvt Ltd</h4>
+            <h3 className="timeline-header">Senior Software Engineer</h3>
+            <h4 className="timeline-header">AppZui Technologies Pvt Ltd</h4>
             <p>
-              Working for US based client company (https://www.liquidanalytics.com)
+              Working for US based client Liquid Analytics (https://www.liquidanalytics.com)
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -63,8 +63,8 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="vertical-timeline-element-title">Tech Lead</h3>
-            <h4 className="vertical-timeline-element-subtitle">Think And Learn Pvt Ltd</h4>
+            <h3 className="timeline-header">Tech Lead</h3>
+            <h4 className="timeline-header">Think And Learn Pvt Ltd</h4>
             <p>
               Tech Stack: NodeJS, React, AngularJS, MongoDB
             </p>
@@ -75,8 +75,8 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="vertical-timeline-element-title">Founder</h3>
-            <h4 className="vertical-timeline-element-subtitle">Shikshitha</h4>
+            <h3 className="timeline-header">Founder</h3>
+            <h4 className="timeline-header">Shikshitha</h4>
             <p>
               Tech Stack: Android, Jersey RESTful API, Angular 2+, AWS, MYSQL
             </p>
@@ -87,8 +87,8 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="vertical-timeline-element-title">Android App Developer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Banyan Learning Solutions (SchoolCom)</h4>
+            <h3 className="timeline-header">Android App Developer</h3>
+            <h4 className="timeline-header">Banyan Learning Solutions (SchoolCom)</h4>
             <p>
               
             </p>
@@ -99,8 +99,8 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="vertical-timeline-element-title">Freelancer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Upright / Study Manager / FabFresh</h4>
+            <h3 className="timeline-header">Freelancer</h3>
+            <h4 className="timeline-header">Upright / Study Manager / FabFresh</h4>
             <p>
               Tech Stack: ASP.NET / Android App Development++
             </p>
@@ -114,8 +114,8 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="vertical-timeline-element-title">Master of Technology</h3>
-            <h4 className="vertical-timeline-element-subtitle">Computer Science, SIT, Tumkur</h4>
+            <h3 className="timeline-header">Master of Technology</h3>
+            <h4 className="timeline-header">Computer Science, SIT, Tumkur</h4>
             <p>
               CGPA: 7.93
             </p>
@@ -126,8 +126,8 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="vertical-timeline-element-title">Bachelor of Engineering</h3>
-            <h4 className="vertical-timeline-element-subtitle">Electronics and Communication, SSIT, Tumkur</h4>
+            <h3 className="timeline-header">Bachelor of Engineering</h3>
+            <h4 className="timeline-header">Electronics and Communication, SSIT, Tumkur</h4>
             <p>
               CGPA: 8.67
             </p>
@@ -138,8 +138,8 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="vertical-timeline-element-title">Class 12</h3>
-            <h4 className="vertical-timeline-element-subtitle">Sapthagiri Pre-University College, Tumkur</h4>
+            <h3 className="timeline-header">Class 12</h3>
+            <h4 className="timeline-header">Sapthagiri Pre-University College, Tumkur</h4>
             <p>
               84%
             </p>

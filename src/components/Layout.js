@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { rhythm } from '../utils/typography'
 
 const ListLink = props => (
@@ -45,13 +46,29 @@ class Layout extends React.Component {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
+          maxWidth: rhythm(26),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          backgroundColor: 'var(--bg)',
+          color: 'var(--textNormal)',
+          transition: 'color 0.2s ease-out, background 0.2s ease-out',
         }}
       >
         {header}
         {children}
         <footer>
+          <ThemeToggler>
+            {({ theme, toggleTheme }) => (
+              <label>
+                <input
+                  type="checkbox"
+                  onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                  checked={theme === 'dark'}
+                />{' '}
+                Dark mode
+              </label>
+            )}
+          </ThemeToggler>
+          <br></br>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
