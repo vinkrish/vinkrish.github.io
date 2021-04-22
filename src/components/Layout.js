@@ -12,9 +12,14 @@ const ListLink = props => (
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
-    //const rootPath = `${__PATH_PREFIX__}/`
-    // if (location.pathname === rootPath)
+    // const isRootPath = location.pathname === `${__PATH_PREFIX__}/`
+    // const pageNumber = location.pathname
+    //   .split('/')
+    //   .filter(Boolean)
+    //   .pop()
+    // const isPaginatedPath = pageNumber && Boolean(pageNumber.match(/^[0-9]+$/))
 
+    // if (isRootPath || isPaginatedPath) {
     let header = (
       <div>
         <Link
@@ -37,7 +42,7 @@ class Layout extends React.Component {
         </Link>
         <ul style={{ listStyle: `none`, float: `right` }}>
           <ListLink to="/">Home</ListLink>
-          <ListLink to="/blogs/">Blog</ListLink>
+          <ListLink to="/blogs/1">Blog</ListLink>
         </ul>
       </div>
       )

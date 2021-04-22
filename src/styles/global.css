@@ -42,3 +42,12 @@ body.dark {
   margin-bottom: 5px;
   margin-left: 0px;
 }
+
+.timeline-ul {
+  list-style-type:none;
+  color: #282c35;
+  margin-top: 5px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+}

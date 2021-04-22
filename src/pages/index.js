@@ -21,7 +21,7 @@ class ResumeIndex extends React.Component {
         />
         <Bio />
         <p>
-          I'm a Developer from Bangalore having experience in full stack, mobile app development and now working on Machine Learning & Data Analysis.
+          I'm a Developer from New York (originally from Bangalore, India) having experience in full stack, mobile app development and now working on Machine Learning & Data Analysis.
           I like to go on a trekking, skating, would love to learn playing Piano and reads about Cosmos staring at sky.
         </p>
         <blockquote style={{color: '#FFA7C4'}} >"Somewhere, something incredible is waiting to be known" - Carl Sagan</blockquote>
@@ -47,15 +47,34 @@ class ResumeIndex extends React.Component {
         <VerticalTimeline layout="1-column">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Since July 2019"
+            date="Jul 2020 - Mar 2021"
+            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+          >
+            <h3 className="timeline-header">Software Development Engineer (contract at Amazon India)</h3>
+            <h4 className="timeline-header">ETeam Infoservices Pvt Ltd</h4>
+            <p>
+              Worked on Seller Rewards platform
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Jul 2019 - Jul 2020"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
             <h3 className="timeline-header">Senior Software Engineer</h3>
             <h4 className="timeline-header">AppZui Technologies Pvt Ltd</h4>
-            <p>
-              Working for US based client Liquid Analytics (https://www.liquidanalytics.com)
-            </p>
+            <div>
+              <p>
+                Worked for US based clients:
+              </p>
+              <ul className="timeline-ul">
+                <li>Liquid Analytics (https://www.liquidanalytics.com)</li>
+                <li>Sahoja (https://sahoja.co/)</li>
+                <li>TermSt (https://termst.com/)</li>
+              </ul>
+            </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
