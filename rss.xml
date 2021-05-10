@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[TunedReality]]></title><description><![CDATA[A personal blog.]]></description><link>https://vinkrish.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 22 Apr 2021 18:02:53 GMT</lastBuildDate><item><title><![CDATA[AOT - Creating current publicly available information in English]]></title><description><![CDATA[Those who watch Attack On Titan pays keen attention to ‘Current publicly available information’, although these information is mentioned in…]]></description><link>https://vinkrish.github.io/aot/</link><guid isPermaLink="false">https://vinkrish.github.io/aot/</guid><pubDate>Sat, 01 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Those who watch Attack On Titan pays keen attention to ‘Current publicly available information’, although these information is mentioned in conversation through out the episodes there is more to learn with graphical representation. I found this website which has made it available.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[TunedReality]]></title><description><![CDATA[A personal blog.]]></description><link>https://vinkrish.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 May 2021 20:53:35 GMT</lastBuildDate><item><title><![CDATA[AOT - Creating current publicly available information in English]]></title><description><![CDATA[Those who watch Attack On Titan pays keen attention to ‘Current publicly available information’, although these information is mentioned in…]]></description><link>https://vinkrish.github.io/aot/</link><guid isPermaLink="false">https://vinkrish.github.io/aot/</guid><pubDate>Sat, 01 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Those who watch Attack On Titan pays keen attention to ‘Current publicly available information’, although these information is mentioned in conversation through out the episodes there is more to learn with graphical representation. I found this website which has made it available.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/aot_1.png&quot; alt=&quot;aot_1&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I love to keep my own copy (80+ images) and another problem with above website is that text is next to thumnail of image which is small.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/aot_2.png&quot; alt=&quot;aot_2&quot;&gt;&lt;/p&gt;
@@ -561,7 +561,8 @@ name of our remote is origin and default local branch name is master.&lt;br&gt;
 pull down any new changes&lt;/p&gt;
 &lt;p&gt;To pull new branch from upstream&lt;br&gt;
 &lt;code&gt;$ git fetch upstream&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;$ git pull upstream/branch_name&lt;/code&gt;&lt;br&gt;
+eg: git fetch origin branch_name&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git pull upstream/branch_name&lt;/code&gt;&lt;br&gt;
 eg: git pull upstream master&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;$ git branch -d branch_name&lt;/code&gt;&lt;br&gt;
 to delete branch&lt;/p&gt;
@@ -744,7 +745,7 @@ git push origin master
 
       &lt;/div&gt;
       &lt;div class=&quot;gist-meta&quot;&gt;
-        &lt;a href=&quot;https://gist.github.com/vinkrish/8745cefb565591fe504f8cd97e081942/raw/1fa0433e77ef1b40a46b70d790ebd1755fc0a588/git-commands.md&quot; style=&quot;float:right&quot;&gt;view raw&lt;/a&gt;
+        &lt;a href=&quot;https://gist.github.com/vinkrish/8745cefb565591fe504f8cd97e081942/raw/b14b1cb8e401ba8f8450c99cfcd5136ecf3b0664/git-commands.md&quot; style=&quot;float:right&quot;&gt;view raw&lt;/a&gt;
         &lt;a href=&quot;https://gist.github.com/vinkrish/8745cefb565591fe504f8cd97e081942#file-git-commands-md&quot;&gt;git-commands.md&lt;/a&gt;
         hosted with &amp;#10084; by &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;
       &lt;/div&gt;
