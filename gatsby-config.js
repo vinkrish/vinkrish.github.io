@@ -29,6 +29,20 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+              // You can add multiple tracking ids and a pageview event will be fired for all of them.
+              trackingIds: [
+                "G-DPW0DW66DH", // Google Analytics / GA
+              ],
+              // This object is used for configuration specific to this plugin
+              pluginConfig: {
+                // Puts tracking script in the head instead of the body
+                head: true,
+              },
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
@@ -74,7 +88,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `G-DPW0DW66DH`,
       },
     },
     `gatsby-plugin-feed`,
