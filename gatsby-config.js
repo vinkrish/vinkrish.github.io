@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `TunedReality`,
+    title: `Home`,
     author: `Vinay`,
     description: `A personal blog.`,
     siteUrl: `https://vinkrish.github.io/`,
@@ -29,19 +29,26 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-plugin-google-gtag`,
+            resolve: "gatsby-plugin-google-tagmanager",
             options: {
-              // You can add multiple tracking ids and a pageview event will be fired for all of them.
-              trackingIds: [
-                "G-DPW0DW66DH", // Google Analytics / GA
-              ],
-              // This object is used for configuration specific to this plugin
-              pluginConfig: {
-                // Puts tracking script in the head instead of the body
-                head: true,
-              },
+              id: "GTM-NRQM2MG",
+              includeInDevelopment: false,
             },
           },
+          // {
+          //   resolve: `gatsby-plugin-google-gtag`,
+          //   options: {
+          //     // You can add multiple tracking ids and a pageview event will be fired for all of them.
+          //     trackingIds: [
+          //       "G-DPW0DW66DH", // Google Analytics / GA
+          //     ],
+          //     // This object is used for configuration specific to this plugin
+          //     pluginConfig: {
+          //       // Puts tracking script in the head instead of the body
+          //       head: true,
+          //     },
+          //   },
+          // },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -85,12 +92,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `G-DPW0DW66DH`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: `G-DPW0DW66DH`,
+    //   },
+    // },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
