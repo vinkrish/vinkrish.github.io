@@ -28,7 +28,7 @@ class ResumeIndex extends React.Component {
         <p>
           Having a blog to document what I learn was a long-overdue and I'm happy to share a bit about my experience with the world.
         </p>
-        <h3>Working on</h3>
+        <h3>Interests</h3>
         <VerticalTimeline layout="1-column">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -36,9 +36,9 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="timeline-header">Data Engineering & Machine Learning</h3>
-            <h4 className="timeline-header">from Coursera, DataCamp and Udacity</h4>
-            <p>
+            <h4 className="timeline-header">Data Engineering & Machine Learning</h4>
+            <h5 className="timeline-header">from Coursera, DataCamp and Udacity</h5>
+            <p id="p-head">
               Statistics, Numpy, Pandas, Spark, Scikit-Learn, Matplotlib, Deep Learning, TensorFlow, Keras
             </p>
           </VerticalTimelineElement>
@@ -47,15 +47,48 @@ class ResumeIndex extends React.Component {
         <VerticalTimeline layout="1-column">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            date="Since Apr 2021"
+            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+          >
+            <h4 className="timeline-header">Senior Software Engineer</h4>
+            <h5 className="timeline-header">Otherside Consulting India Pvt Ltd</h5>
+            <p id="p-head">Tech Stack: NodeJS, PostgreSQL, AWS, Azure</p>
+            <div>
+              <p id="p-head">Working for an Australian Insurance Project</p>
+              <ul className="timeline-ul">
+                <li>Designed Authorization/Permission model for complex roles in Insurance Project</li>
+                <li>Designed Microservice to handles all media/document requirements in a project</li>
+                <li>Developed middleware which performs query building</li>
+                <li>Worked on API’s for insurance policy creation and lodging of claims in the system.</li>
+              </ul>
+            </div>
+            <div>
+              <p id="p-head">Working for Synctactic AI</p>
+              <ul className="timeline-ul">
+                <li>Developed admin microservice which keeps track of all the actions in the system</li>
+                <li>Worked on CI/CD pipeline, using Github Actions / docker / kubernetes</li>
+                <li>Integrated Google Analytics using Apache Airflow</li>
+              </ul>
+            </div>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
             date="Jul 2020 - Mar 2021"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="timeline-header">Software Development Engineer (contract at Amazon India)</h3>
-            <h4 className="timeline-header">ETeam Infoservices Pvt Ltd</h4>
-            <p>
-              Worked on Seller Rewards platform
-            </p>
+            <h4 className="timeline-header">Software Development Engineer (contract at Amazon India)</h4>
+            <h5 className="timeline-header">ETeam Infoservices Pvt Ltd</h5>
+            <div>
+              <p id="p-head">Tech Stack: Java, React, DynamoDB, AWS</p>
+              <p id="p-head">Worked on Seller Rewards platform at Amazon India</p>
+              <ul className="timeline-ul">
+                <li>One of the developer worked towards internationalizing Seller Rewards Program</li>
+                <li>Worked on Seller to Seller referral program development</li>
+                <li>Worked on React web application for creating rewards and the approval system from business team</li>
+              </ul>
+            </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -63,42 +96,35 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="timeline-header">Senior Software Engineer</h3>
-            <h4 className="timeline-header">AppZui Technologies Pvt Ltd</h4>
+            <h4 className="timeline-header">Senior Software Engineer</h4>
+            <h5 className="timeline-header">AppZui Technologies Pvt Ltd</h5>
             <div>
-              <p>
-                Worked for US based clients:
-              </p>
+              <p id="p-head">Tech Stack: NodeJS, MYSQL, MongoDB, AWS, Azure</p>
+              <p id="p-head">Worked for US based clients:</p>
               <ul className="timeline-ul">
-                <li>Liquid Analytics (https://www.liquidanalytics.com)</li>
-                <li>Sahoja (https://sahoja.co/)</li>
-                <li>TermSt (https://termst.com/)</li>
+                <li>Liquid Analytics (https://www.liquidanalytics.com) - Developed 3rd party order placement workflow</li>
+                <li>Sahoja (https://sahoja.co/) - Developed backend using Azure Functions</li>
+                <li>TermSt (https://termst.com/) - Developed file manager system</li>
+                <li>Developed frontend / backend for alternative dispute resolution mediation application</li>
               </ul>
             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="July 2018 - Dec 2018"
+            date="Jul 2016 - Jun 2019"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="timeline-header">Tech Lead</h3>
-            <h4 className="timeline-header">Think And Learn Pvt Ltd</h4>
-            <p>
-              Tech Stack: NodeJS, React, AngularJS, MongoDB
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="Jul 2016 - Jun 2018"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<FontAwesomeIcon icon={faCode} />}
-          >
-            <h3 className="timeline-header">Founder</h3>
-            <h4 className="timeline-header">Shikshitha</h4>
-            <p>
-              Tech Stack: Android, Jersey RESTful API, Angular 2+, AWS, MYSQL
-            </p>
+            <h4 className="timeline-header">Founder</h4>
+            <h5 className="timeline-header">Shikshitha</h5>
+            <div>
+              <p id="p-head">Tech Stack: Android, Jersey RESTful API, Angular 2+, AWS, MYSQL</p>
+              <ul className="timeline-ul">
+                <li>Developed Android apps for school faculties & for parent</li>
+                <li>Developed Angular2+ admin web app to manage master data</li>
+                <li>Developed Restful Web Services in Spring Boot with JPA</li>
+              </ul>
+            </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -106,11 +132,16 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="timeline-header">Android App Developer</h3>
-            <h4 className="timeline-header">Banyan Learning Solutions (SchoolCom)</h4>
-            <p>
-              
-            </p>
+            <h4 className="timeline-header">Android App Developer</h4>
+            <h5 className="timeline-header">Banyan Learning Solutions (SchoolCom)</h5>
+            <div>
+              <p id="p-head">Tech Stack: Android, MYSQL</p>
+              <ul className="timeline-ul">
+                <li>Developed two tablet applications for teachers and principal which captures data related to exams</li>
+                <li>Developed syncing mechanism to keep all devices in sync with each other and with server database</li>
+                <li>Designed interactive dashboard and navigation allowing school faculty to view micro-level data</li>
+              </ul>
+            </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -118,11 +149,9 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="timeline-header">Freelancer</h3>
-            <h4 className="timeline-header">Upright / Study Manager / FabFresh</h4>
-            <p>
-              Tech Stack: ASP.NET / Android App Development++
-            </p>
+            <h4 className="timeline-header">Freelancer</h4>
+            <h5 className="timeline-header">Upright / Study Manager / FabFresh</h5>
+            <p id="p-head">Tech Stack: ASP.NET / Android App Development++</p>
           </VerticalTimelineElement>
         </VerticalTimeline>
         <h3>Education</h3>
@@ -133,11 +162,9 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="timeline-header">Master of Technology</h3>
-            <h4 className="timeline-header">Computer Science, SIT, Tumkur</h4>
-            <p>
-              CGPA: 7.93
-            </p>
+            <h4 className="timeline-header">Master of Technology</h4>
+            <h5 className="timeline-header">Computer Science, SIT, Tumkur</h5>
+            <p id="p-head">CGPA: 7.93</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -145,11 +172,9 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="timeline-header">Bachelor of Engineering</h3>
-            <h4 className="timeline-header">Electronics and Communication, SSIT, Tumkur</h4>
-            <p>
-              CGPA: 8.67
-            </p>
+            <h4 className="timeline-header">Bachelor of Engineering</h4>
+            <h5 className="timeline-header">Electronics and Communication, SSIT, Tumkur</h5>
+            <p id="p-head">CGPA: 8.67</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -157,11 +182,9 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h3 className="timeline-header">Class 12</h3>
-            <h4 className="timeline-header">Sapthagiri Pre-University College, Tumkur</h4>
-            <p>
-              84%
-            </p>
+            <h4 className="timeline-header">Class 12</h4>
+            <h5 className="timeline-header">Sapthagiri Pre-University College, Tumkur</h5>
+            <p id="p-head">84%</p>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </Layout>
