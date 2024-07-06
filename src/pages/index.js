@@ -45,9 +45,28 @@ class ResumeIndex extends React.Component {
         </VerticalTimeline>
         <h3>Work Experience</h3>
         <VerticalTimeline layout="1-column">
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Since Jul 2022"
+            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faCode} />}
+          >
+            <h4 className="timeline-header">Software Engineer</h4>
+            <h5 className="timeline-header">Casting Networks</h5>
+            <p id="p-head">Tech Stack: NodeJS, PostgreSQL, DynamoDB, ElasticSearch, AWS</p>
+            <div>
+              <p id="p-head">Working to help performers find great roles and industry professionals find great talent.</p>
+              <ul className="timeline-ul">
+                <li>Developing GraphQL endpoints, using federated gateway</li>
+                <li>Working in half a dozen microservices to make the system work</li>
+                <li>Handling high volume of data with high performant sql queries and ElasticSearch indexes</li>
+                <li></li>
+              </ul>
+            </div>
+          </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Since Apr 2021"
+            date="Apr 2021 - Jun 2022"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
