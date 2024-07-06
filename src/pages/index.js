@@ -60,7 +60,6 @@ class ResumeIndex extends React.Component {
                 <li>Developing GraphQL endpoints, using federated gateway</li>
                 <li>Working in half a dozen microservices to make the system work</li>
                 <li>Handling high volume of data with high performant sql queries and ElasticSearch indexes</li>
-                <li></li>
               </ul>
             </div>
           </VerticalTimelineElement>
