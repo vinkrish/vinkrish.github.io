@@ -22,6 +22,8 @@ class ResumeIndex extends React.Component {
         <Bio />
         <p>
           I'm a Developer from New York (originally from Bangalore, India) having experience in full stack, mobile app development and was interested in Data Analysis & Machine Learning (Reinforcement Learning put a break to my learning!).
+        </p>
+        <p>
           I like to go on a trekking, skating, would love to learn playing Piano and reads about Cosmos staring at sky.
         </p>
         <blockquote style={{color: '#FFA7C4'}} >"Somewhere, something incredible is waiting to be known" - Carl Sagan</blockquote>
@@ -170,12 +172,12 @@ class ResumeIndex extends React.Component {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Dec 2017 - Jan 2018 / Oct 2016 - Jan 2017 / 2015"
+            date="2015 / (Oct 2016 - Jan 2017)"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
             <h4 className="timeline-header">Freelancer</h4>
-            <h5 className="timeline-header">Study Manager / FabFresh</h5>
+            <h5 className="timeline-header">FabFresh / Study Manager</h5>
             <p id="p-head">Tech Stack: Android App Development</p>
           </VerticalTimelineElement>
         </VerticalTimeline>
