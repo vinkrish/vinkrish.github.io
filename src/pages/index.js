@@ -53,13 +53,16 @@ class ResumeIndex extends React.Component {
           >
             <h4 className="timeline-header">Software Engineer</h4>
             <h5 className="timeline-header">Casting Networks</h5>
-            <p id="p-head">Tech Stack: NodeJS, PostgreSQL, DynamoDB, ElasticSearch, AWS</p>
+            <p id="p-head">Tech Stack: NodeJS (NestJS), Lambda, PostgreSQL, DynamoDB, ElasticSearch, AWS</p>
             <div>
               <p id="p-head">Working to help performers find great roles and industry professionals find great talent.</p>
               <ul className="timeline-ul">
-                <li>Developing GraphQL endpoints, using federated gateway</li>
-                <li>Working in half a dozen microservices to make the system work</li>
-                <li>Handling high volume of data with high performant sql queries and ElasticSearch indexes</li>
+                <li>Developed and maintained high traffic microservices following distributed systems architecture</li>
+                <li>Designed and implemented GraphQL APIs using Apollo Federation and RPC for service communication</li>
+                <li>Integrated Recurly for subscription billing management, facilitating automated recurring monthly subscription charges</li>
+                <li>Built Lambda functions to generate client-specific reports and automated business workflows</li>
+                <li>Optimized search functionality with ElasticSearch, improving performance across multiple services</li>
+                <li>Utilized PostgreSQL (handling 2,500 database connection per minute) and DynamoDB (handling 1 million submissions a day), ensuring robust performance across microservices</li>
               </ul>
             </div>
           </VerticalTimelineElement>
@@ -75,18 +78,19 @@ class ResumeIndex extends React.Component {
             <div>
               <p id="p-head">Working for an Australian Insurance Project</p>
               <ul className="timeline-ul">
-                <li>Designed Authorization/Permission model for complex roles in Insurance Project</li>
-                <li>Designed Microservice to handles all media/document requirements in a project</li>
-                <li>Developed middleware which performs query building</li>
-                <li>Worked on API’s for insurance policy creation and lodging of claims in the system.</li>
+                <li>Designed Authorization / Permission model from scratch, aligning with client requirements to ensure secure access control across the platform</li>
+                <li>Developed microservices to handle all media and notification components</li>
+                <li>Worked on APIs for insurance policy creation and claim lodging, collaborating with clients from the project’s inception</li>
+                <li>Integrated Azure Blob Storage with signed-url access, building a secure, scalable solution for medai management</li>
+                <li>Designed and developed middleware which performs query building based on roles and runtime filter conditions</li>
               </ul>
             </div>
             <div>
               <p id="p-head">Working for Synctactic AI</p>
               <ul className="timeline-ul">
-                <li>Developed admin microservice which keeps track of all the actions in the system</li>
-                <li>Worked on CI/CD pipeline, using Github Actions / docker / kubernetes</li>
-                <li>Integrated Google Analytics using Apache Airflow</li>
+                <li>Integrated Google Analytics with Apache Airflow to extract analytics data using client’s OAuth</li>
+                <li>Developed an admin service to track all system actions and enable reversal of any action by storing historical actions and data associations. This feature improved auditability and accountability, reducing the time to resolve errors</li>
+                <li>Worked on CI/CD pipeline, using Github Actions to build docker images and deploying images in kubernetes cluster</li>
               </ul>
             </div>
           </VerticalTimelineElement>
@@ -102,9 +106,10 @@ class ResumeIndex extends React.Component {
               <p id="p-head">Tech Stack: Java, React, DynamoDB, AWS</p>
               <p id="p-head">Worked on Seller Rewards platform at Amazon India</p>
               <ul className="timeline-ul">
-                <li>One of the developer worked towards internationalizing Seller Rewards Program</li>
-                <li>Worked on Seller to Seller referral program development</li>
-                <li>Worked on React web application for creating rewards and the approval system from business team</li>
+                <li>Internationalized Seller Rewards Program, expanding its reach to multiple regions and increasing user engagement</li>
+                <li>Developed APIs for creating rewards and enrolling users, enabling seamless reward management and boosting user participation in the system</li>
+                <li>Integrated payment services for successful rewards completion</li>
+                <li>Enhanced the React web application for reward creation and approval workflows, streamlining processes for the business team</li>
               </ul>
             </div>
           </VerticalTimelineElement>
@@ -120,10 +125,9 @@ class ResumeIndex extends React.Component {
               <p id="p-head">Tech Stack: NodeJS, MYSQL, MongoDB, AWS, Azure</p>
               <p id="p-head">Worked for US based clients:</p>
               <ul className="timeline-ul">
-                <li>Liquid Analytics (https://www.liquidanalytics.com) - Developed 3rd party order placement workflow</li>
-                <li>Sahoja (https://sahoja.co/) - Developed backend using Azure Functions</li>
-                <li>TermSt (https://termst.com/) - Developed file manager system</li>
-                <li>Developed frontend / backend for alternative dispute resolution mediation application</li>
+                <li>Designed and developed file management system for the TermSt client, enabling document sharing across borrowers and lenders in the platform</li>
+                <li>Architected and implemented the backend for the social wellness platform Sahoja, utilizing Azure Functions to ensure scalability and performance</li>
+                <li>Developed both the frontend and backend for the alternative dispute resolution mediation system for Fulton County Court, streamlining case management and improving access to mediation services</li>
               </ul>
             </div>
           </VerticalTimelineElement>
@@ -138,9 +142,11 @@ class ResumeIndex extends React.Component {
             <div>
               <p id="p-head">Tech Stack: Android, Jersey RESTful API, Angular 2+, AWS, MYSQL</p>
               <ul className="timeline-ul">
-                <li>Developed Android apps for school faculties & for parent</li>
-                <li>Developed Angular2+ admin web app to manage master data</li>
-                <li>Developed Restful Web Services in Spring Boot with JPA</li>
+                <li>Developed Android applications for both school faculties and parents, implementing role-based access control to ensure users only interact with data and features relevant to their roles</li>
+                <li>Designed the database architecture after conducting comprehensive research on the Indian education system</li>
+                <li>Developed Angular2+ admin web app to manage master data across educational Institutions</li>
+                <li>Developed Restful Web Services using Spring Boot with JPA for efficient data handling and integration</li>
+                <li>Leveraged AWS services including EC2, Elastic Beanstalk, S3, RDS, and SNS, to enhance scalability, reliability and to implement SMS notification service</li>
               </ul>
             </div>
           </VerticalTimelineElement>
@@ -155,9 +161,10 @@ class ResumeIndex extends React.Component {
             <div>
               <p id="p-head">Tech Stack: Android, MYSQL</p>
               <ul className="timeline-ul">
-                <li>Developed two tablet applications for teachers and principal which captures data related to exams</li>
-                <li>Developed syncing mechanism to keep all devices in sync with each other and with server database</li>
-                <li>Designed interactive dashboard and navigation allowing school faculty to view micro-level data</li>
+                <li>As one of the founding developers, I took full ownership of Android app development, deploying applications in over 50+ schools</li>
+                <li>Developed two tablet applications with offline functionality for teachers and principals to capture test and exam related data efficiently</li>
+                <li>Designed an interactive dashboard and intuitive navigation system, enabling school faculty to analyze micro-level data with comprehensive student and class-level exam analytics</li>
+                <li>Implemented a robust syncing mechanism to ensure seamless data synchronization across all devices and the server database, ensuring consistency and reliability of data access across the platform</li>
               </ul>
             </div>
           </VerticalTimelineElement>
@@ -168,8 +175,8 @@ class ResumeIndex extends React.Component {
             icon={<FontAwesomeIcon icon={faCode} />}
           >
             <h4 className="timeline-header">Freelancer</h4>
-            <h5 className="timeline-header">Upright / Study Manager / FabFresh</h5>
-            <p id="p-head">Tech Stack: ASP.NET / Android App Development++</p>
+            <h5 className="timeline-header">Study Manager / FabFresh</h5>
+            <p id="p-head">Tech Stack: Android App Development</p>
           </VerticalTimelineElement>
         </VerticalTimeline>
         <h3>Education</h3>
