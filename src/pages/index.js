@@ -21,7 +21,7 @@ class ResumeIndex extends React.Component {
         />
         <Bio />
         <p>
-          I'm a Developer from New York (originally from Bangalore, India) having experience in full stack, mobile app development and now working on Machine Learning & Data Analysis.
+          I'm a Developer from New York (originally from Bangalore, India) having experience in full stack, mobile app development and was interested in Data Analysis & Machine Learning (Reinforcement Learning put a break to my learning!).
           I like to go on a trekking, skating, would love to learn playing Piano and reads about Cosmos staring at sky.
         </p>
         <blockquote style={{color: '#FFA7C4'}} >"Somewhere, something incredible is waiting to be known" - Carl Sagan</blockquote>
@@ -200,16 +200,6 @@ class ResumeIndex extends React.Component {
             <h4 className="timeline-header">Bachelor of Engineering</h4>
             <h5 className="timeline-header">Electronics and Communication, SSIT, Tumkur</h5>
             <p id="p-head">CGPA: 8.67</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="2005 - 2007"
-            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-            icon={<FontAwesomeIcon icon={faCode} />}
-          >
-            <h4 className="timeline-header">Class 12</h4>
-            <h5 className="timeline-header">Sapthagiri Pre-University College, Tumkur</h5>
-            <p id="p-head">84%</p>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </Layout>

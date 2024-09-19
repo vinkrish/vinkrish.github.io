@@ -13,7 +13,8 @@ function Bio() {
         return (
           <div
             style={{
-              display: `flex`
+              display: `flex`,
+              width: '100%'
             }}
           >
             <Image
