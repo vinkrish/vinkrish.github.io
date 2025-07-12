@@ -3,11 +3,15 @@ title: AOT - Creating current publicly available information in English
 date: '2019-06-01'
 ---
 
-Those who watch Attack On Titan pays keen attention to 'Current publicly available information', although these information is mentioned in conversation through out the episodes there is more to learn with graphical representation. I found this website which has made it available.
+If you're a fan of Attack on Titan, you’ve likely noticed the "Current Publicly Available Information" slides that appear between episodes. While this information is often mentioned in dialogues, the visuals in the show provide deeper insights.
+
+I came across a website that compiled these slides, which was great! But it had a couple of drawbacks:
+
+- The English translations appeared beside small image thumbnails, making them hard to read.
 
 ![aot_1](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/aot_1.png)
 
-I love to keep my own copy (80+ images) and another problem with above website is that text is next to thumnail of image which is small.
+- Clicking an image caused the text to disappear, which was inconvenient.
 
 ![aot_2](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/aot_2.png)
 
@@ -15,7 +19,9 @@ If I click on image i'll lose the text, so I did some **web scraping** and use *
 
 let's look at the steps involved:
 
-1. Using **BeautifulSoup** to scrape the webpages. By inspecting the page, I realised the images have `href` attribute and also to remove other unwanted links I have put condition based on length which in our case satisfy the image links.
+1. Scrape Image Links with BeautifulSoup
+
+By inspecting the page, I realised the images have `href` attribute and also to remove other unwanted links I have put condition based on length which in our case satisfy the image links.
 
 ```python
 from bs4 import BeautifulSoup
@@ -41,7 +47,7 @@ with open('extracted-img-links.txt', 'w') as file:
 ```
 The image links are saved to a file.
 
-2. Now we can download those images one by one using `urllib.request` to open URL and save the images on computer.
+2. Once I had all the image links, I used `urllib.request` to download them locally.
 
 ```python
 import urllib.request
@@ -114,7 +120,9 @@ with open('extracted.txt', 'w') as file:
             file.write(line)
 ```
 
-5. Final step is to use OpenCV to add border and write text on it.
+5. Overlay Text on Images using OpenCV
+
+Finally, I added a bottom border to each image and overlaid the corresponding English text. Since OpenCV doesn’t wrap text automatically, I added logic to manually break lines.
 
 ```python
 import sys
@@ -150,10 +158,16 @@ for i in range(1,85):
     cv.imwrite('C:/Users/Vinay/Pictures/AOT/sub/{0}.png'.format(i), dst)
 ```
 
-This is how it looks.
+Here's how the final image looks with the English text embedded directly:
 
 ![aot_3](https://vinkrish-notes.s3-us-west-2.amazonaws.com/img/aot_3.png)
 
-> Pay attention to English text at bottom of image
+> Notice the English description clearly visible at the bottom of the image!
 
-The above code also aligns text and split lines coz OpenCV doesn't wrap the text.
+## Summary 
+
+By combining web scraping with OpenCV image processing, I built a personal archive of Attack on Titan's "Current Publicly Available Information" slides — with readable English captions embedded directly into the image.
+
+This approach solved:
+- The issue of small text thumbnails,
+- The inconvenience of losing text when viewing images.

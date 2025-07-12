@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+// import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { rhythm } from '../utils/typography'
 
 const ListLink = props => (
@@ -61,7 +61,7 @@ class Layout extends React.Component {
         {header}
         {children}
         <footer>
-          <ThemeToggler>
+          {/* <ThemeToggler>
             {({ theme, toggleTheme }) => (
               <label>
                 <input
@@ -72,7 +72,7 @@ class Layout extends React.Component {
                 Dark mode
               </label>
             )}
-          </ThemeToggler>
+          </ThemeToggler> */}
           <br></br>
           © {new Date().getFullYear()}, Built with
           {` `}

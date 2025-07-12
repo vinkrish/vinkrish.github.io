@@ -3,24 +3,52 @@ title: Recap & New Beginning
 date: '2019-01-24'
 ---
 
-It's been 5 yrs since I started my career in software industry. I switched jobs, started my own startup and failed in it, although I evaluate myself from time to time it's time to put that in writing - this also helps me plan.
+# 5 Years in Software: A Personal Retrospective
 
-I used to fear shear number of students passing out each year and then finding job while recession was still fresh in my mind. When I passed out as Elecronics and Communication Engineer I wasn't cut out for any job in that field but programming caught my attention and decided to do Masters in Computer Science, now I feel I could have skipped college if I wanted to be where I'm today - but I wasn't the same person back then so I don't regret my decision. One thing I do regret is not making use of my first computer which I got at the age of 20.
+It's been five years since I began my journey in the software industry. Along the way, I’ve changed jobs, founded a startup (and experienced the sting of its failure), and constantly evaluated my path. This post is an attempt to reflect on those years—putting my thoughts into words not only helps me process the past but also shapes how I plan for the future.
 
-## Success
-I have come across people talking about their success stories - most of them had access to computer and resources at very young age, thinking in that direction I am happy to be where I'm today despite being late to the party.
+## The Beginning
 
-## Introvert
-Being an introvert has it's downside in any industry, I've been working on it gradually but it's a slow process. It does affect my career when I wasn't voicing my opinion and bringing ideas to table.
+Back when I was graduating with a degree in Electronics and Communication Engineering, the fear of joblessness was very real. The recession was still fresh in our minds, and the sheer number of students entering the job market each year made everything feel uncertain.
 
-## Forgetfullness or Amnesia
-I am fortunate to be healthy all my life and only complain I had is my forgetfulness. The best I could do is remembering my mobile number - when I learn new programming language it was never difficult to adopt and get things done but the challenge is to remember language specific consruct when I jump to learning new things.
-This also doesn't help me while having conversation about Data Structure and Algorithms which I honestly can't remember unless I refer them again.
+I wasn’t cut out for a job in my field, but programming caught my attention. That led me to pursue a Master’s in Computer Science. Looking back now, I sometimes wonder if I even needed a degree to reach where I am today—but the truth is, I wasn’t the same person back then. I don’t regret that decision. If there’s one thing I do regret, it’s not making the most out of my first computer, which I got at the age of 20.
 
-## Vulnerabilities
-People are building cool stuff and I'm using those libraries to meet my requirements, there is always a feeling that I'm not being part of bigger open-source community where I can contribute and I'm sure it will feel nice being in that position.
+## Success (Redefined)
 
-## Quest for learning
-So far I've tried Android App Development, Angular, React, Java back-end, NodeJS, MySQL, MongoDB, GraphQL, AWS. I've documented most of my work or demo projects on [GitHub](https://github.com/vinkrish), with this blog I'm willing to go step further document my learning, be pro-active and possibly create some content on YouTube.
+I often hear success stories from people who had access to computers and learning resources at a young age. That wasn’t my case—but despite being late to the party, I’ve managed to carve out my own space in this industry. And that, to me, is a success worth celebrating.
 
-This year again I'm learning something new - Python / Machine Learning and DevOps with Docker and Kubernetes, I've my doubts on how successful I can be in this challenging field but I'm willing to give my best.
+## The Quiet Struggle of Being an Introvert
+
+Being an introvert has its downsides, especially in tech where collaboration and communication are key. I've been working on speaking up more—sharing ideas, asking questions, and contributing to discussions. It's a slow process, but an essential one, especially when I reflect on opportunities I missed simply because I stayed quiet.
+
+## Forgetfulness (My Lifelong Quirk)
+
+If there’s one constant in my life, it’s been my forgetfulness. I’ve been healthy and active, but memory—particularly short-term memory—has always been my weak spot. I can pick up new programming languages quickly, but remembering their syntax after moving to something else? That’s another story.
+
+It affects me especially in Data Structures and Algorithms. Unless I’ve recently reviewed them, I struggle to recall even the basics during conversations or interviews. It’s frustrating, but I’ve learned to work around it with documentation and repetition.
+
+## The Feeling of Being a Consumer
+
+There’s an underlying guilt that comes from being a user of open-source software rather than a contributor. I often find myself thinking, “People out there are building amazing things, and I’m just using their work.” I know I have the skills to contribute, and I’m working toward reaching a point where I feel confident and capable of giving back to the community that has helped me so much.
+
+## A Relentless Curiosity
+
+One thing I’m proud of is my curiosity and love for learning. Over the past few years, I’ve explored:
+
+- Android app development
+- Angular and React
+- Java and Node.js backend
+- GraphQL, MySQL, MongoDB, ElasticSearch
+
+Most of my work and demo projects are documented on [GitHub](https://github.com/vinkrish), and now, with this blog, I’m pushing myself to go a step further—by writing more consistently, being more proactive, and even considering creating YouTube content to share what I learn.
+
+## What’s Next
+
+This year, I'm diving into:
+- Python
+- Machine Learning
+- DevOps tools like Docker and Kubernetes
+
+To be honest, I’m uncertain how far I’ll go in these new territories. These are complex, competitive fields. But that’s never stopped me before. I’m here to give it my best—just like I always have.
+
+Thanks for reading. This post is a snapshot of my journey—a mix of success, doubt, growth, and aspiration. If you're on a similar path, I hope this resonates with you. Let's keep learning.
