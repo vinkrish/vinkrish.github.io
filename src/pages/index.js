@@ -9,9 +9,7 @@ import 'react-vertical-timeline-component/style.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 
-class ResumeIndex extends React.Component {
-  render() {
-    const { data } = this.props
+const ResumeIndex= ({data}) => {
     const siteTitle = data.site.siteMetadata.title
     return (
       <Layout title={siteTitle}>
@@ -48,8 +46,24 @@ class ResumeIndex extends React.Component {
         <h3>Work Experience</h3>
         <VerticalTimeline layout="1-column">
         <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          date="Since Dec 2024"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={<FontAwesomeIcon icon={faCode} />}
+        >
+          <h4 className="timeline-header">Senior Data Engineer</h4>
+          <h5 className="timeline-header">CVS</h5>
+          <p id="p-head">Tech Stack: NodeJS, Python, Snowflake, MongoDB, Kafka, Docker, kubernetes, Azure</p>
+          <div>
+            <p id="p-head">*</p>
+            <ul className="timeline-ul">
+              <li></li>
+            </ul>
+          </div>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Since Jul 2022"
+            date="Jul 2022 - Sep 2024"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
@@ -102,8 +116,8 @@ class ResumeIndex extends React.Component {
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
           >
-            <h4 className="timeline-header">Software Development Engineer (contract at Amazon India)</h4>
-            <h5 className="timeline-header">ETeam Infoservices Pvt Ltd</h5>
+            <h4 className="timeline-header">Software Development Engineer</h4>
+            <h5 className="timeline-header">Amazon (Contract)</h5>
             <div>
               <p id="p-head">Tech Stack: Java, React, DynamoDB, AWS</p>
               <p id="p-head">Worked on Seller Rewards platform at Amazon India</p>
@@ -206,7 +220,6 @@ class ResumeIndex extends React.Component {
         </VerticalTimeline>
       </Layout>
     )
-  }
 }
 
 export default ResumeIndex

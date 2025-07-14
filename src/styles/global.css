@@ -22,6 +22,7 @@ body {
   --textLink: #D23669;
   --hr: hsla(0, 0%, 0%, 0.2);
 
+  color: var(--color-text);
   background-color: var(--bg);
 }
 
@@ -60,4 +61,41 @@ body.dark {
 
 .timeline-ul li {
   margin: 2px 0px 0px 5px;
+}
+
+/* 1 */
+:root {
+  --color-primary: #CD104D;
+  --color-text: #2e353f;
+  --color-text-light: #4f5969;
+  --color-heading: #1a202c;
+  --color-heading-black: #000000;
+  --color-accent: #d1dce5;
+  --bg: #FFFFFF;
+  --dark-mode: #000;
+  --dark-mode-hf: #CD104D;
+}
+
+/* 3 */
+body.dark {
+  --bg: #171717;
+  --color-primary: #CD104D;
+  --color-text: #ffffff;
+  --color-text-light: #4f5969;
+  --color-heading: #DFDFDE;
+  --color-heading-black: #EDEDED;
+  --color-accent: #d1dce5;
+  /* --image: url("./images/sun.svg"); */
+}
+
+/* 4 */
+body.light {
+  --color-primary: #CD104D;
+  --color-text: #2e353f;
+  --color-text-light: #4f5969;
+  --color-heading: #1a202c;
+  --color-heading-black: black;
+  --color-accent: #d1dce5;
+  --bg: #FFFFFF;
+  /* --image: url("./images/moon.svg"); */
 }
