@@ -63,39 +63,26 @@ body.dark {
   margin: 2px 0px 0px 5px;
 }
 
-/* 1 */
-:root {
-  --color-primary: #CD104D;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: #000000;
-  --color-accent: #d1dce5;
-  --bg: #FFFFFF;
-  --dark-mode: #000;
-  --dark-mode-hf: #CD104D;
+.sun {
+  display: block;
 }
 
-/* 3 */
-body.dark {
-  --bg: #171717;
-  --color-primary: #CD104D;
-  --color-text: #ffffff;
-  --color-text-light: #4f5969;
-  --color-heading: #DFDFDE;
-  --color-heading-black: #EDEDED;
-  --color-accent: #d1dce5;
-  /* --image: url("./images/sun.svg"); */
+.moon {
+  display: none;
 }
 
-/* 4 */
-body.light {
-  --color-primary: #CD104D;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
-  --color-accent: #d1dce5;
-  --bg: #FFFFFF;
-  /* --image: url("./images/moon.svg"); */
+.dark .sun {
+  display: none;
+}
+
+.dark .moon {
+  display: block;
+}
+
+.forceBlackText p {
+  color: black !important;
+}
+
+body.dark .vertical-timeline-element-date {
+  color: black !important;
 }

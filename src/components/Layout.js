@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-// import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { rhythm } from '../utils/typography'
+import DarkModeToggle from './DarkModeToggle'
 
 const ListLink = ({ to, children }) => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -11,29 +11,43 @@ const ListLink = ({ to, children }) => (
 
 const Layout = ({ location, title, children }) => {
   const header = (
-    <div>
-      <Link
-        style={{
-          boxShadow: `none`,
-          textDecoration: `none`,
-          color: `inherit`,
-        }}
-        to={`/`}
-      >
-        <h2
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexWrap: 'wrap', 
+        marginBottom: rhythm(1.0),
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <Link
           style={{
-            fontFamily: `Montserrat, sans-serif`,
-            display: `inline-block`,
-            marginTop: 0,
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `inherit`,
           }}
+          to={`/`}
         >
-          {title}
-        </h2>
-      </Link>
-      <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/blogs/1">Blog</ListLink>
-      </ul>
+          <h2
+            style={{
+              fontFamily: `Montserrat, sans-serif`,
+              display: `inline-block`,
+              marginTop: 0,
+              marginBottom: 0,
+            }}
+          >
+            {title}
+          </h2>
+        </Link>
+      </div>
+      <div style={{ display: `flex`, alignItems: 'center', gap: '1rem' }}>
+        <DarkModeToggle />
+        <ul style={{ listStyle: 'none', display: 'flex', alignItems: 'center', margin: 0, padding: 0 }}>
+          <ListLink to="/">Home</ListLink>
+          <ListLink to="/blogs/1">Blog</ListLink>
+        </ul>
+      </div>
     </div>
   )
 

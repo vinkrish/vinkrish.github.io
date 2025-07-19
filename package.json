@@ -2,7 +2,7 @@
   "name": "vinkrish-personal-blog",
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "author": "Vinay Krishna <vinaykrishna1989@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

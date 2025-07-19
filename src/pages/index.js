@@ -19,10 +19,10 @@ const ResumeIndex= ({data}) => {
         />
         <Bio />
         <p>
-          I'm a Developer from New York (originally from Bangalore, India) having experience in full stack, mobile app development and was interested in Data Analysis & Machine Learning (Reinforcement Learning put a break to my learning!).
+          I'm a Developer based in New York (originally from Bangalore, India) having experience in full stack development and Data Engineering. I've also explored Data Analysis & Machine Learning - though my deep dive into reinforcement learning temporarily hit pause!
         </p>
         <p>
-          I like to go on a trekking, skating, would love to learn playing Piano and reads about Cosmos staring at sky.
+          I enjoy hiking, kayaking, practising Tennis in my basement, dream of learning to play the piano someday, and love reading about the cosmos while gazing up at the night sky.
         </p>
         <blockquote style={{color: '#FFA7C4'}} >"Somewhere, something incredible is waiting to be known" - Carl Sagan</blockquote>
         <p>
@@ -31,7 +31,7 @@ const ResumeIndex= ({data}) => {
         <h3>Interests</h3>
         <VerticalTimeline layout="1-column">
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--work forceBlackText"
             date="2019-2020"
             iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
@@ -46,7 +46,7 @@ const ResumeIndex= ({data}) => {
         <h3>Work Experience</h3>
         <VerticalTimeline layout="1-column">
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work forceBlackText"
           date="Since Dec 2024"
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<FontAwesomeIcon icon={faCode} />}
@@ -55,14 +55,14 @@ const ResumeIndex= ({data}) => {
           <h5 className="timeline-header">CVS</h5>
           <p id="p-head">Tech Stack: NodeJS, Python, Snowflake, MongoDB, Kafka, Docker, kubernetes, Azure</p>
           <div>
-            <p id="p-head">*</p>
+            <p id="p-head">DDAT (Digital Data Analytics Technology)</p>
             <ul className="timeline-ul">
-              <li></li>
+              <li>Work in Progress</li>
             </ul>
           </div>
         </VerticalTimelineElement>
         <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--work forceBlackText"
             date="Jul 2022 - Sep 2024"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
@@ -83,7 +83,7 @@ const ResumeIndex= ({data}) => {
             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--work forceBlackText"
             date="Apr 2021 - Jun 2022"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
@@ -111,7 +111,7 @@ const ResumeIndex= ({data}) => {
             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--work forceBlackText"
             date="Jul 2020 - Mar 2021"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
@@ -130,7 +130,7 @@ const ResumeIndex= ({data}) => {
             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--work forceBlackText"
             date="Jul 2019 - Jul 2020"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
@@ -148,7 +148,7 @@ const ResumeIndex= ({data}) => {
             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--work forceBlackText"
             date="Jul 2016 - Jun 2019"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
@@ -167,7 +167,7 @@ const ResumeIndex= ({data}) => {
             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--work forceBlackText"
             date="Dec 2013 - May 2016"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
@@ -185,7 +185,7 @@ const ResumeIndex= ({data}) => {
             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--work forceBlackText"
             date="2015 / (Oct 2016 - Jan 2017)"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
@@ -198,7 +198,7 @@ const ResumeIndex= ({data}) => {
         <h3>Education</h3>
         <VerticalTimeline layout="1-column">
           <VerticalTimelineElement
-            className="vertical-timeline-element--education"
+            className="vertical-timeline-element--education forceBlackText"
             date="2011 - 2013"
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}
@@ -208,7 +208,7 @@ const ResumeIndex= ({data}) => {
             <p id="p-head">CGPA: 7.93</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--education"
+            className="vertical-timeline-element--education forceBlackText"
             date="2007 - 2011"
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faCode} />}

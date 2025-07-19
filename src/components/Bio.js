@@ -31,7 +31,7 @@ const Bio = () => {
               }}
             />
             <p> 
-              Hi, I'm <strong>{author}</strong> - a Programmer who "Read-Evaluate-Loop". You can find me on
+              Hi, I'm <strong>{author}</strong> - a Programmer who loves to Read, Evaluate and Loop. You can find me on
               {` `}
               <a href="https://github.com/vinkrish" target="_blank">
                 GitHub
