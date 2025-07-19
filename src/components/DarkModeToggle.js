@@ -3,8 +3,11 @@ import Sun from "../images/sun.svg";
 import Moon from "../images/moon-bats.svg";
 
 function getDefaultTheme() {
+  if (typeof window !== "undefined") {
     const savedTheme = window.localStorage.getItem('theme');
     return savedTheme ? savedTheme : 'dark';
+  }
+  return 'dark';
 }
 
 const DarkModeToggle = () => {
